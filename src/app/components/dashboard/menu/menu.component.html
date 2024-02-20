@@ -1,0 +1,15 @@
+<nav class="fixed-top container-fluid">
+    <div class="row ">
+
+      <div class="col-2 d-flex align-items-center">
+        <app-img-profile
+        [img]="imageUser ? imageUser : isDefaultImage"
+        ></app-img-profile>
+      </div>
+      <div class="col-10 d-flex align-items-center">
+        <app-message-hour (messageHour)="getMessageHour($event)"></app-message-hour>
+            <a>Olá <strong>{{showNameUser}}</strong>, {{messageHour}}!</a>
+      </div>  
+      
+      </div>
+</nav>
